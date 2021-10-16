@@ -42,6 +42,14 @@ jobs:
           command: |
             yarn frontend:build
       - run:
+          name: Back-End Test
+          command: |
+            yarn backend:test
+      - run:
+          name: Front-End Test
+          command: |
+            yarn frontend:test
+      - run:
           name: Back-End Deploy
           command: |
             yarn backend:deploy
